@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoBite Products - Premium edible cutlery made from natural grains. Plates, bowls, cups, forks, and spoons.">
+  <title>Products — EcoBite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/products.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <!-- <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-logo">Eco<span>Bite</span></div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div> -->
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="assets/images/logo.png" class="nav-logo" aria-label="EcoBite Home">
+        <img src="assets/images/logo.png" alt="EcoBite Logo">
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link active">Products</a></li>
+        <li><a href="index.html#preparation" class="nav-link">Preparation</a></li>
+        <li><a href="index.html#branding" class="nav-link">Branding</a></li>
+        <li><a href="index.html#impact" class="nav-link">Impact</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-cart" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1>Our Collection</h1>
+      <p>Premium edible cutlery crafted from natural grains. Each piece designed for performance and sustainability.</p>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-bar">
+    <div class="container">
+      <div class="filters-left">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dining">Dining</button>
+        <button class="filter-btn" data-filter="beverage">Beverage</button>
+        <button class="filter-btn" data-filter="cutlery">Cutlery</button>
+      </div>
+      <div class="filters-right">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="searchInput" placeholder="Search products..." aria-label="Search products">
+        </div>
+        <select class="sort-select" id="sortSelect" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products Grid -->
+  <main class="container">
+    <div class="products-page-grid" id="productsGrid">
+      <!-- Products inserted by JS -->
+    </div>
+  </main>
+
+  <!-- Quick View Modal -->
+  <div class="quick-view-modal" id="quickViewModal" role="dialog" aria-modal="true">
+    <div class="quick-view-overlay" id="quickViewOverlay"></div>
+    <div class="quick-view-content">
+      <button class="quick-view-close" id="quickViewClose" aria-label="Close quick view">
+        <svg viewBox="0 0 24 24" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="quick-view-image">
+        <img id="qvImage" src="" alt="">
+      </div>
+      <div class="quick-view-info">
+        <h2 id="qvName"></h2>
+        <div class="price" id="qvPrice"></div>
+        <p id="qvDesc"></p>
+        <div class="quick-view-features" id="qvFeatures"></div>
+        <a href="#" class="btn btn-primary" id="qvLink">View Full Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="assets/images/logo.png" class="nav-logo" aria-label="EcoBite Home">
+        <img src="assets/images/logo.png" alt="EcoBite Logo">
+      </a>
+          <p>Premium edible cutlery crafted from natural grains. Eat your plate, save the planet.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="product.html?id=plate">Edible Plate</a></li>
+            <li><a href="product.html?id=bowl">Edible Bowl</a></li>
+            <li><a href="product.html?id=cup">Edible Cup</a></li>
+            <li><a href="product.html?id=fork">Edible Fork</a></li>
+            <li><a href="product.html?id=spoon">Edible Spoon</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#solution">About Us</a></li>
+            <li><a href="index.html#preparation">Our Process</a></li>
+            <li><a href="index.html#impact">Sustainability</a></li>
+            <li><a href="index.html#branding">Custom Branding</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoBite. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/products.js"></script>
+</body>
+</html>

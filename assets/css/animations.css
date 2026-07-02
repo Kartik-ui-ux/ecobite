@@ -1,0 +1,227 @@
+/* ============================================
+   EcoBite - Animations Stylesheet
+   ============================================ */
+
+/* ---------- Magnetic Button Effect ---------- */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Card Hover Glow ---------- */
+.glow-card {
+  position: relative;
+}
+
+.glow-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(27, 94, 32, 0.3), rgba(200, 164, 90, 0.3));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.glow-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------- Image Zoom on Hover ---------- */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-zoom:hover img {
+  transform: scale(1.08);
+}
+
+/* ---------- Text Gradient Animation ---------- */
+.text-gradient {
+  background: linear-gradient(135deg, var(--cream) 0%, var(--gold) 50%, var(--green-secondary) 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ---------- Parallax Scroll ---------- */
+.parallax-layer {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* ---------- Counter Animation ---------- */
+.counter-animate {
+  display: inline-block;
+}
+
+/* ---------- Accordion ---------- */
+.accordion-item {
+  border-bottom: 1px solid rgba(200, 164, 90, 0.08);
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.accordion-header:hover {
+  color: var(--gold);
+}
+
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transition: transform var(--transition-smooth);
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.accordion-icon::before {
+  width: 12px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.accordion-icon::after {
+  width: 2px;
+  height: 12px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform var(--transition-smooth);
+}
+
+.accordion-item.open .accordion-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-body-inner {
+  padding: 0 0 20px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ---------- Hover Underline ---------- */
+.hover-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width var(--transition-smooth);
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* ---------- Stagger Fade In ---------- */
+.stagger-in > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stagger-in.visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+.stagger-in.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.stagger-in.visible > *:nth-child(3) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+.stagger-in.visible > *:nth-child(4) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.stagger-in.visible > *:nth-child(5) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+.stagger-in.visible > *:nth-child(6) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+
+/* ---------- Typing Cursor ---------- */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: var(--gold);
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* ---------- Pulse Glow ---------- */
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(27, 94, 32, 0.3); }
+  50% { box-shadow: 0 0 20px 4px rgba(27, 94, 32, 0.15); }
+}
+
+/* ---------- Slide Up on Scroll ---------- */
+.slide-up {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- Hover Scale ---------- */
+.hover-scale {
+  transition: transform var(--transition-smooth);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .reveal, .reveal-left, .reveal-right, .reveal-scale, .slide-up {
+    opacity: 1;
+    transform: none;
+  }
+}

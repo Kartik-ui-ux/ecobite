@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact EcoBite - Get in touch for custom branding, wholesale orders, or general inquiries.">
+  <title>Contact — EcoBite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-logo">Eco<span>Bite</span></div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div> -->
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="assets/images/logo.png" class="nav-logo" aria-label="EcoBite Home">
+        <img src="assets/images/logo.png" alt="EcoBite Logo">
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="index.html#preparation" class="nav-link">Preparation</a></li>
+        <li><a href="index.html#branding" class="nav-link">Branding</a></li>
+        <li><a href="index.html#impact" class="nav-link">Impact</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-cart" aria-label="Shopping cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact" style="padding-top: 140px;">
+    <div class="container">
+      <div class="contact-info reveal-left">
+        <span class="section-label">Get in Touch</span>
+        <h2>Let's Build a<br>Sustainable Future</h2>
+        <p>Whether you're a restaurant owner, cafe operator, or event planner — we'd love to help you go zero-waste. Reach out and let's create something beautiful together.</p>
+
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <span>Email</span>
+              <p>hello@ecobite.com</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <span>Phone</span>
+              <p>+1 (555) 987-6543</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <span>Location</span>
+              <p>San Francisco, CA</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <span>Hours</span>
+              <p>Mon — Fri, 9AM — 6PM PST</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="#" class="contact-social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="contact-social" aria-label="Twitter">
+            <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+          <a href="#" class="contact-social" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="contact-social" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal-right">
+        <h3>Send a Message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Full Name</label>
+            <input type="text" id="contactName" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail" placeholder="you@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject" required>
+              <option value="">Select a topic</option>
+              <option value="wholesale">Wholesale Inquiry</option>
+              <option value="branding">Custom Branding</option>
+              <option value="partnership">Partnership</option>
+              <option value="press">Press & Media</option>
+              <option value="support">Customer Support</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" placeholder="Tell us about your project, business, or question..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Send Message
+            <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="assets/images/logo.png" class="nav-logo" aria-label="EcoBite Home">
+        <img src="assets/images/logo.png" alt="EcoBite Logo">
+      </a>
+          <p>Premium edible cutlery crafted from natural grains. Eat your plate, save the planet.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="product.html?id=plate">Edible Plate</a></li>
+            <li><a href="product.html?id=bowl">Edible Bowl</a></li>
+            <li><a href="product.html?id=cup">Edible Cup</a></li>
+            <li><a href="product.html?id=fork">Edible Fork</a></li>
+            <li><a href="product.html?id=spoon">Edible Spoon</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#solution">About Us</a></li>
+            <li><a href="index.html#preparation">Our Process</a></li>
+            <li><a href="index.html#impact">Sustainability</a></li>
+            <li><a href="index.html#branding">Custom Branding</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoBite. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      // Page loader
+      var loader = document.getElementById('pageLoader');
+      if (loader) {
+        window.addEventListener('load', function() {
+          setTimeout(function() { loader.classList.add('hidden'); }, 1600);
+        });
+      }
+
+      // Navbar toggle
+      var toggle = document.getElementById('navToggle');
+      var menu = document.getElementById('navMenu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          var isOpen = menu.classList.toggle('open');
+          toggle.classList.toggle('active');
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+      }
+
+      // Scroll progress
+      var bar = document.getElementById('scrollProgress');
+      if (bar) {
+        window.addEventListener('scroll', function() {
+          var h = document.documentElement;
+          bar.style.width = ((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100) + '%';
+        });
+      }
+
+      // Cart count
+      var countEl = document.getElementById('cartCount');
+      if (countEl) {
+        var cart = JSON.parse(localStorage.getItem('ecobite_cart') || '[]');
+        countEl.textContent = cart.reduce(function(s, i) { return s + i.quantity; }, 0);
+      }
+
+      // Contact form
+      var form = document.getElementById('contactForm');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = form.querySelector('button[type="submit"]');
+          var orig = btn.innerHTML;
+          btn.innerHTML = '<span style="color:var(--cream);">&#10003; Message Sent!</span>';
+          btn.disabled = true;
+          setTimeout(function() {
+            btn.innerHTML = orig;
+            btn.disabled = false;
+            form.reset();
+          }, 2500);
+        });
+      }
+
+      // Reveal animations
+      var reveals = document.querySelectorAll('.reveal-left, .reveal-right, .reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function(el) { observer.observe(el); });
+    });
+  })();
+  </script>
+</body>
+</html>
